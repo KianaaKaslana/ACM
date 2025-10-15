@@ -1,0 +1,50 @@
+#include<iostream>
+#include<map>
+#include<algorithm>
+#include<vector>
+#include<stack>
+#include<set>
+#include<math.h>
+#include<string>
+#include<deque>
+#include<iomanip>
+#include<string.h>
+#include<queue>
+#define ll long long
+#define maxn 2000005
+#define endl '\n'
+using namespace std;
+int sz[200005];
+string s[200005];
+void solve() {
+    int n,m;
+    cin>>n>>m;
+    for(int i=0;i<n;i++){
+        cin>>s[i];
+    }
+    string t="DDDG";
+    int xb=0;
+    for(int i=0;i<m;i++){
+        for(int j=0;j<n;j++){
+            if(s[j][i]==t[xb]){
+                xb++;
+                break;
+            }
+        }
+        if(xb>=4){
+            cout<<"YES"<<endl;
+            return;
+        }
+    }
+    cout<<"NO"<<endl;
+}
+int main() {
+    ios::sync_with_stdio(0); cin.tie(0), cout.tie(0);
+    int a = 1;
+    cin >> a;
+    while (a--) {
+        solve();
+    }
+    return 0;
+}
+
